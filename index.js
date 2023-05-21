@@ -4,12 +4,12 @@ const path = require('path');
 const hbs = require("hbs");
 const port = process.env.PORT ||  4000;
 const {json} = require("express");
-const { promises } = require('fs');
 
 //public  static mens html che page link jodayachi express la
-const static_Path = path.join(__dirname,"../public");
-const template_Path = path.join(__dirname,"../templates/views");
-const partials_Path = path.join(__dirname,"../templates/partials");
+const static_Path = path.join(__dirname,"/public");
+const template_Path = path.join(__dirname,"/templates/views");
+console.log(template_Path);
+const partials_Path = path.join(__dirname,"/templates/partials");
 
 
 app.use(express.json());
