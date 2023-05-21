@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>header}}
+</head>
+
+<body>
+  {{!-- Navbar --}}
+  {{>navbar}}
+  weather app
+  {{!-- <!--  main header  ---> --}}
+
+  <div class="container-fluid main_header">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="main_content">
+
+          <form action="post">
+            <input type="text" autocomplete="on"  id="cityName" placeholder="Enter Your city Name" />
+            <input type="submit" id="submitbtn" value="search" />
+          </form>
+<div class="box_container">
+          <p class="day">Satarday </p>
+          <p class="Today_date"></p>
+           <div class="main_layer">
+            <p id="city_name">Get Started</p>
+            <div class="middle_layer data_hide">
+         <span id="temp"></span><span id="degree"><sup>0</sup>C</span><span id="temp_status"></span>
+    
+              {{!-- <h1><i class="fa-solid fa-cloud-meatball fa-bounce" style="color: #635cc7;"></i></h1> --}}
+              {{!-- <h1><i class="fa-solid fa-cloud-moon fa-beat-fade" style="color: #5c37b3;"></i></h1> --}}
+              {{!-- <h1><i class="fa-solid fa-cloud-showers-heavy fa-shake" style="color: #613cb9;"></i></h1> --}}
+            </div>
+
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="about_footer">
+     {{>footer}}
+      </div>
+
+    
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
