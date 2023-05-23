@@ -7,11 +7,7 @@
     "node":"18.x"
   },
   "scripts": {
-<<<<<<< HEAD
     "start":"node index.js -e js,hbs",
-=======
-    "start":"node index.js -e js,hbs,html",
->>>>>>> 772aa6ae5e34ac94f697c58a86dd70feae2811ff
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
