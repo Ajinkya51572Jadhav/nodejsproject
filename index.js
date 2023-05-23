@@ -17,8 +17,10 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static(static_Path));
 app.set("view engine",'hbs');
 app.set("views", template_Path);
-hbs.registerPartials(partials_Path);
+hbs.registerPartials(partials_Path);         
 
+
+       
 
 // Routing 
 
@@ -37,8 +39,9 @@ app.get("/about",(req,res)=>{
  app.get("/weather",(req,res)=>{
   res.render("weather");
  
- });
+ });           
 
+  
  
   app.get("*",(req,res)=>{
   res.render("404error",{
@@ -47,11 +50,23 @@ app.get("/about",(req,res)=>{
   });
 
 
+
 // port connected 
 app.listen(port,(err)=>{
 if(err)throw err;
-console.log(` ${port} connected`);
+console.log(` ${port} connected`); 
 
 });
 
 
+
+
+        
+   
+
+         
+
+                                                   
+
+
+        

@@ -7,11 +7,15 @@
     font-family: 'Piazzolla',serif;
 }   
 
+
 :root{
+    --white-color:#edf2fc;        /* Primary color*/
+    --black-color:#212121;        /*secondary color*/
+}
 
-    --main-bg:#1e272e;
-    --main-color:#603eda;
-
+.dark-theme{
+    --white-color:#000106;
+    --black-color:#fff;
 }
 
 html{
@@ -19,23 +23,30 @@ html{
     }
 
 body{
+    background-color: var(--white-color);
+    color: var(--black-color);
     width: 100%;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
+
+
+
 .row{
     margin: 0;
 }
 
 .main_manu{
-background-color: var(--main-bg);
+background-color: var(--white-color);
 }
+
+/*  navber  */
 
 .navbar{
     box-sizing: border-box;
-    color: #fff;
+    color:var(--white-color);
     padding:0.15rem 0;
     font-size: 1.4rem;
 }
@@ -83,33 +94,22 @@ button{
 }
 
 
-/* footer{
-    width: 100%;
-    background-color: var(--main-color);
-    text-align: center;
-    color: white;
-    line-height:4rem;
-    padding: 3px;
-    bottom:0px;
-    height: 10vh;
-    font-size: 1.1rem;
-    position: absolute;
 
- }  */
-
-
-
+/*  footer  */
 footer{
     width: 100%;
-    background-color: #603eda;
+    background-color:var(--black-color);
+    color:var(--white-color);
      margin-top: auto;
+     bottom: 0rem;
 }
 
 
 footer p {
      margin: 0;
      text-align: center;
-     color: #fff;
+     background-color:var(--black-color) ;
+     color:var(--white-color);
      line-height: 5rem;
      font-size:1.4rem;
 }
@@ -119,10 +119,16 @@ width: 100%;
 margin-top:385px;
 }
 
+
 /* about page */
 .main_header_right figure img{
-    box-shadow:  0 18px 6px -6px var(--main-color);
+    box-shadow:  0 18px 6px -6px var(--black-color);
+    width:70%;
+    height:70vh;
+    padding: 10px;
 }
+    
+
 
 /* weather page */
 
@@ -136,9 +142,10 @@ margin-top:385px;
 #cityName{
      width:70%;
      padding: 10px;
-    background-color: #603eda;
+    background-color: var(--white-color);
     border-radius: 5px;
-    color: white;
+    border: 1px solid var(--black-color);
+    color:var(--black-color);
     font-size: 15px;
 }
 
@@ -152,21 +159,21 @@ margin-top:385px;
 
 
 .box_container{
+    border: 1px solid var(--black-color);
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
     width: 50%;
     height: 50%;
-    background-color: #532ed8;
-    color: white;
+    background-color:var(--white-color);
+    color: var(--black-color);
 }
+
 .middle_layer{
 position: relative;
 }
 
-.main_content{
 
-}
 
  .middle_layer  #temp_status{
 /* position: absolute; */
@@ -180,10 +187,46 @@ font-size: 80px;
 #city_name{
     font-size:20px;
 }
+
+/* moon  & sun image */
+
+
+#icon{
+    position: absolute;
+    right:20rem;
+    top:4px;
+    cursor: pointer;
+    height:40px;
+    width: 40px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
+
+
 /* responcive code  */
 
 @media(max-width:768px){
-     .main_header_left{
+     
+    
+    
+#icon{
+    cursor: pointer;
+    position:absolute;
+    right:23rem;
+    top:-5px;
+}   
+      
+.main_header_right figure  img{
+    width:80%;
+    height:50vh;
+}
+    
+    
+    
+    
+    .main_header_left{
         width: 50%;
         height:30vh;
               
@@ -199,12 +242,30 @@ font-size: 80px;
         flex-wrap: wrap;
      }
 
+    .box_container{
+        border: 1px solid var(--black-color);
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width:100%;
+        height:50%;
+        background-color:var(--white-color);
+        color: var(--black-color);
+
+    }
+
+    .main_header{
+      width: 100%;
+      height: 100vh;
+    }
+
+    .main_content #submitbtn{
+   position: absolute;
+ 
+    }
+
+
 }
-
-
-
-
-
 
 
 

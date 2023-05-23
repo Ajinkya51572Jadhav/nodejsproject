@@ -4,17 +4,19 @@
   {{>header}}
 </head>
 <body>
-
-  {{!--  Navbar --}}
+  {{!-- Navbar  --}}
 
       {{>navbar}}
+
+        <img src='/images/moon.png' id="icon"/>
+   
   {{!-- <!--  main header  --> --}}
+
 
   <div class="container-fluid main_header">
       <div class="row">
         <div class="col-md-10 col-12 mx-auto">
           <div class="row">
-
 
             {{!--  left side div  --}}
             <div class="col-md-6 col-12 main_header_left">
@@ -58,14 +60,30 @@
             </div>
          </div>
      </div>
- </div>
+ </div> 
 </div>
 
 
 {{!--   footer section  --}}
 
 {{>footer}}
+  
 
+  <script>
+    let icon = document.getElementById('icon');
+function changeicon(){
+    document.body.classList.toggle("dark-theme");
+    let change_icon = document.body.classList.contains("dark-theme");
+    if(change_icon){
+     icon.src='/images/sun.png';
+      }else{
+     icon.src='/images/moon.png';
+   }
+}
+
+icon.addEventListener("click",changeicon);
+
+  </script>
 </body>
 </html>
 

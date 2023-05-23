@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  {{>header}}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+{{>header}}
 </head>
+<body>
+
+  <img src='/images/moon.png' id="icon"/>
+
   <div class="container-fluid main_header">
       <div class="row">
         <div class="col-md-10 col-12 mx-auto">
@@ -12,14 +22,33 @@
     <a href="/"><button>go back </button></a>
    </div>
 
-
+ 
    {{!-- left side div   --}}
 <div class="col-md-6 col-12 main_header_right  ">
    <figure>
     <img src="/images/undraw_Page_not_found_re_e9o6.png" class="img-fluid" title="ajinkya" alt="img" style="height: 100%; width: 100%; margin-top:10px;"/>
    </figure>
-</div>     
+</div>      
 </div>
      </div>
  </div>
-</div>
+</div>  
+
+    <script>
+        let icon = document.getElementById('icon');
+function changeicon(){
+    document.body.classList.toggle("dark-theme");
+    let change_icon = document.body.classList.contains("dark-theme");
+    if(change_icon){
+     icon.src='/images/sun.png';
+      }else{
+     icon.src='/images/moon.png';
+   }
+}
+
+icon.addEventListener("click",changeicon);
+
+    </script>
+</body>
+</html>
+
